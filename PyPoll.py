@@ -12,6 +12,13 @@ import os
 #Assign a variable to for the file to load and a path
 file_to_load = 'Resources/election_results.csv'
 
+#open the election results and read the file. 
+election_data = open(file_to_load, 'r')
+
+#To do: perform analysis
+
+#close the file. 
+election_data.close()
 
 #Open the election results and read the file.
 with open(file_to_load) as election_data:
