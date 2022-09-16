@@ -24,11 +24,11 @@ with open(file_to_load) as election_data:
     #Read the file object witht he reader function.
     file_reader = csv.reader(election_data)
 
-    #Print each row in the CSV file.
-    for row in file_reader:
-        print(row)
+    #Read and print the header row.
+    headers = next(file_reader)
 
-        
+    print(headers)
+
 #To do: read and analyze data here.
 
     #use the open statement to open the file as a text file. 
