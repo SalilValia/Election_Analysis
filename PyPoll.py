@@ -60,7 +60,7 @@ with open(file_to_load) as election_data:
                 f"--------------------------\n")
             print(election_results, end="")
      # Save the final vote count to the text file
-            txt_file.write(election_results)
+            
         
             #Determine the percentage of votes for each candidate by looping through the counts.
             # Iterate through the candidate liste.
@@ -70,7 +70,12 @@ with open(file_to_load) as election_data:
                 # Calculate the percentage of votes.
                 vote_percentage = float(votes) / float(total_votes) * 100
                 # Print the candidate name and percentage of votes.
-                #print(f"{candidate_name}: {vote_percentage:.1f}% ({votes})\n")
+                candidate_results = (f"{candidate_name}: {vote_percentage:.1f}% ({votes})\n")
+        print(candidate_results)
+
+        txt_file.write(candidate_results)
+
+
 
         # Determine winning vote count and candidate
         #To do: print out the winning candidate, vote count and percentage to terminal 
@@ -104,7 +109,7 @@ print(winning_candidate_summary)
 outfile = open(file_to_save, "w")
 
 #Write some data to the file. 
-outfile.write("Hello World")
+#outfile.write("Hello World")
 
 #close the file
 outfile.close()
@@ -115,7 +120,7 @@ with open(file_to_save, "w") as txt_file:
 
     #Write some data to the file.
     #Write the three counties to the file and removed Hello World and make into separate lines
-    txt_file.write("Counties in the Election\n---------\nArapahoe\nDenver\nJefferson")
+    #txt_file.write("Counties in the Election\n---------\nArapahoe\nDenver\nJefferson")
     
 
 
@@ -124,7 +129,7 @@ with open(file_to_save, "w") as txt_file:
 
 
 #Using the with statement open the file as a text file
-with open(file_to_load) as election_data:
+#with open(file_to_load) as election_data:
 
     reader = csv.reader(election_data)
     print(reader)
