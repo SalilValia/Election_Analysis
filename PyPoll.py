@@ -24,6 +24,8 @@ total_votes = 0
 #Candidate Options
 candidate_options = []
 
+#1. Declare the empty dictionary. 
+candidate_votes = 1
 
 #open the election results and read the file.
 with open(file_to_load) as election_data:
@@ -42,9 +44,13 @@ with open(file_to_load) as election_data:
         #Print the candidate name from each row.
         candidate_name = row[2]
 
-        #Add the candidate name to the candidate list. 
-        candidate_options.append(candidate_name)
-        
+        #If the candidate does not match any existing candidate...
+        if candidate_name not in candidate_options:
+            #add it to the list of cadidates.
+            candidate_options.append(candidate_name)
+
+    #print the candidate list.
+    print(candidate_options)
 
 # 3. Print the total votes.
 print(total_votes)
