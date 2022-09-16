@@ -52,9 +52,9 @@ with open(file_to_load) as election_data:
             #2. Begin tracking the candidate's vote count.
             candidate_votes[candidate_name] = 0
 
-            # Add a vote to that candidate's count.
-            candidate_votes[candidate_name] += 1
-            
+        # Add a vote to that candidate's count.
+        candidate_votes[candidate_name] += 1
+
 
     #print the candidate vote dictionary
     print(candidate_votes)
