@@ -83,7 +83,17 @@ with open(file_to_load) as election_data:
 
             #3. Set the winning_candidate equalto the candidate's name.
             winning_candidate = candidate_name
+    winning_candidate_summary = (
+        f"--------------\n"
+        f"Winner: {winning_candidate}\n"
+        f"Winning Vote Count: {winning_count:,}\n"
+        f"Winning Percentage: {winning_percentage:.1f}%\n"
+        f"---------------\n")
+    print(winning_candidate_summary)
 
+    
+    #To do: print out the winning candidate, vote count and percentage to terminal 
+    print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
         
 
     
