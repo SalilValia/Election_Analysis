@@ -27,6 +27,12 @@ candidate_options = []
 #1. Declare the empty dictionary. 
 candidate_votes = {}
 
+# Winning Candidate and Winning Count Tracker
+winning_candidate = ""
+winning_count = 0
+winning_percentage = 0
+
+
 #open the election results and read the file.
 with open(file_to_load) as election_data:
 
@@ -66,7 +72,20 @@ with open(file_to_load) as election_data:
 
         #4. Print the candidate name and percentage of votes.
         print(f"{candidate_name}: received {vote_percentage}% of the vote.")
+
+        # Determine winning vote count and candidate
+
+        #1. Determine if the votes are greter than the winning count.
+        if (votes > winning_count) and (vote_percentage > winning_percentage):
+            #2. If true then set winning_count = vote and winning_percent = vote_percentage
+            winning_count = votes
+            winning_percentage = vote_percentage
+
+            #3. Set the winning_candidate equalto the candidate's name.
+            winning_candidate = candidate_name
+
         
+
     
 
 
