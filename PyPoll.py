@@ -74,6 +74,9 @@ with open(file_to_load) as election_data:
         print(f"{candidate_name}: received {vote_percentage}% of the vote.")
 
         # Determine winning vote count and candidate
+        
+        #To do: print out the winning candidate, vote count and percentage to terminal 
+        print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
 
         #1. Determine if the votes are greter than the winning count.
         if (votes > winning_count) and (vote_percentage > winning_percentage):
@@ -90,10 +93,6 @@ with open(file_to_load) as election_data:
         f"Winning Percentage: {winning_percentage:.1f}%\n"
         f"---------------\n")
     print(winning_candidate_summary)
-
-    
-    #To do: print out the winning candidate, vote count and percentage to terminal 
-    print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
         
 
     
