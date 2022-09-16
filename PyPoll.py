@@ -9,14 +9,52 @@
 import csv
 import os
 
+path = os.path.join("C:", "Documents", "GitHub", "Election_Analysis")
+
 # Assign a variable for the file to load and the path.
-file_to_load = os.path.join('C:', 'Documents', 'GitHub', 'Election_Analysis', "Resources", "election_results.csv")
+#this is what it was suppoed to be file_to_load = os.path.join(".." "Resources", "election_results.csv")
+file_to_load = os.path.join(path, "Resources", "election_results.csv")
 
 # Assign a variable to save file to a path
-file_to_save = os.path.join('C:', 'Documents', 'GitHub', 'Election_Analysis', "analysis", "election_analysis.txt")
+file_to_save = os.path.join(path, "analysis", "election_analysis.txt")
+
+#open the election results and read the file.
+with open(file_to_load) as election_data:
+
+    #Read the file object witht he reader function.
+    file_reader = csv.reader(election_data)
+
+    #Print each row in the CSV file.
+    for row in file_reader:
+        print(row)
+
+        
+#To do: read and analyze data here.
+
+    #use the open statement to open the file as a text file. 
+    outfile = open(file_to_save, "w")
+
+    #Write some data to the file. 
+    outfile.write("Hello World")
+
+    #close the file
+    outfile.close()
+
 
 #Open the election results and read the file.
+with open(file_to_save, "w") as txt_file:
 
+    #Write some data to the file.
+    #Write the three counties to the file and removed Hello World and make into separate lines
+    txt_file.write("Counties in the Election\n---------\nArapahoe\nDenver\nJefferson")
+    
+
+
+
+
+
+
+#Using the with statement open the file as a text file
 with open(file_to_load) as election_data:
 
     reader = csv.reader(election_data)
