@@ -1,7 +1,7 @@
 # Election_Analysis
 
 ## Project Purpose
-Our purpose for this challange was to get a better understanding on how python works. Python is a powerful tool that can be uesd to pull date, place it into another file, and also save it to a different file as well. Python can also be difficult at times and you need to make sure you are double and triplechecking your change to make sure everything is running smoothly. Spelling error and in my case indentations are very essential in making python run smoothly. 
+Our purpose for this challange was to get a better understanding on how python works. Python is a powerful tool that can be uesd to pull date, place it into another file, and also save it to a different file as well. Python can also be difficult at times and you need to make sure you are double and triplechecking your change to make sure everything is running smoothly. Spelling error and in my case indentations are very essential in making python run smoothly.The biggest trouble I had was the os.path. That took a few days because it was not finding a clear path to pull the data from the csv file and convert it into a txt file. With the help of my friend, he suggested I use a variable for that path to make it easier to pull the data. 
 
 ## Overview of Election Audit 
 A Colorado Board of Elections employee has given me the following tasks to complete the election audit of a recent local congressional election. 
